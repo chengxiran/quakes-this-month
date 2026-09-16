@@ -4,7 +4,10 @@
 replace, and the check counts words: comments like this one are not words, so
 delete each one as you write. Start with the heading: name the phenomenon.
 
-Then, in this order, at least 150 words in total. -->
+Then, in this order, at least 150 words in total.
+
+New to folders, paths, or the files here whose names start with a dot? Read
+https://github.com/sd5913/pfad/blob/2026/reference/files.md first. Ten minutes. -->
 
 ![what the picture is](out/plot.png)
 
