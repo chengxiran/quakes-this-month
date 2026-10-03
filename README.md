@@ -1,34 +1,15 @@
-# The phenomenon
+# Earthquakes, one month
 
-<!-- This is the SD5913 assignment 2 template. Everything in this file is yours to
-replace, and the check counts words: comments like this one are not words, so
-delete each one as you write. Start with the heading: name the phenomenon.
+This project visualises earthquakes of magnitude 4.5 and above reported by the United States Geological Survey (USGS) during the month-long period represented by its feed. I chose earthquakes because their locations, magnitudes and depths make it possible to compare several dimensions of one natural phenomenon in a single picture. The data snapshot in this repository was downloaded on 3 October 2026 (UTC), so the image can be regenerated without an internet connection.
 
-Then, in this order, at least 150 words in total.
+The source is the [USGS Magnitude 4.5+ Earthquakes, Past Month GeoJSON feed](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson). The committed file contains 513 event features. Each feature represents one reported earthquake and includes a longitude and latitude in degrees, a magnitude (a dimensionless measure), and a hypocenter depth in kilometres. The feed changes over time; the committed file is the unchanged snapshot used for this image.
 
-New to folders, paths, or the files here whose names start with a dot? Read
-https://github.com/sd5913/pfad/blob/2026/reference/files.md first. Ten minutes. -->
+![Worldwide locations of magnitude 4.5 and larger earthquakes, with marker size showing magnitude and colour showing depth](out/earthquakes_4_5_month.svg)
 
-![what the picture is](out/plot.png)
+Each dot marks an earthquake's reported epicentre: bigger circles indicate larger magnitudes, and colour indicates depth below the surface. The clusters show where these reported events occurred during the snapshot period. This flat longitude-and-latitude view has no coastlines or tectonic plate boundaries, does not show the order of events in time, and distorts geographic distances near the poles; it also includes only events in this feed, not smaller earthquakes.
 
-## The phenomenon
+To regenerate the picture from the committed data file, run:
 
-<!-- What goes up and down, and why you looked at it. -->
-
-## The source
-
-<!-- A link to the page or endpoint the file came from, and one line on what is in
-the file: how many rows, what a row means, what the units are. -->
-
-## What the picture shows
-
-<!-- Two or three sentences. Including what it hides: every transformation throws
-something away, and naming what yours threw away is the easiest way to sound like
-you know what you did. -->
-
-## Run it
-
-```
-uv run fetch.py
+```text
 uv run plot.py
 ```

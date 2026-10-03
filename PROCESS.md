@@ -1,15 +1,7 @@
 # Process
 
-<!-- Same as assignment 1, same honesty. Which tools you used and for what; one
-thing you kept and why it was good; one thing you rejected and why it was wrong.
-"I did not use any" is fine if it is true.
+I used VS Code to organise the files and Python scripts, and ChatGPT/Codex to help inspect the assignment, plan the data workflow, and draft the first version of the plotting code. I checked the script against the actual USGS GeoJSON fields (`features`, `geometry.coordinates`, and `properties.mag`) and bundled 513-event data snapshot rather than assuming a generic CSV layout.
 
-If a model wrote most of plot.py, which is likely and allowed, the interesting part
-is what you had to correct: did it invent a column name, use pandas where a list
-would do, silently drop the rows it could not parse? -->
+I kept the suggestion to make marker size reflect magnitude and colour reflect depth because both visual channels map directly to measured values in the source. I rejected the idea of plotting only the strongest handful of earthquakes: it would make the image simpler, but it would hide much of the selected feed without a data-based reason. I also kept the raw GeoJSON unchanged and made the plotting script read that local file, so the same picture can be regenerated offline.
 
-## Tools
-
-## Kept
-
-## Rejected
+Before submitting, I will add my own notes about any edits I make to the code, design, or explanation, and record the work in several plain-language Git commits across more than one day.
